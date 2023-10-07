@@ -27,5 +27,10 @@ public class AppController {
 	public String getAnotherResponse () {
 		return "Hey gentelman take another response!!! Heck!";
 	}
+	
+	@GetMapping ("/getMyName")
+	public String getMyName () {
+		return "Hey gentelman you name is Chandan Kumar B S!!! Heck!";
+	}
 
 }
