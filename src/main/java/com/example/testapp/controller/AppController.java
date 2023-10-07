@@ -22,5 +22,10 @@ public class AppController {
 	public String getResponse () {
 		return "Hey gentelman take response!!! Heck!";
 	}
+	
+	@GetMapping ("/getAnotherResponse")
+	public String getAnotherResponse () {
+		return "Hey gentelman take another response!!! Heck!";
+	}
 
 }
