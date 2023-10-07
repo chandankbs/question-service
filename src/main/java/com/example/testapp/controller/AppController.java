@@ -22,6 +22,5 @@ public class AppController {
 	public String getResponse () {
 		return "Hey gentelman take response!!! Heck!";
 	}
-		
 
 }
