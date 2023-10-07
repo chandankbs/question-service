@@ -17,5 +17,11 @@ public class AppController {
 		
 		return list;
 	}
+	
+	@GetMapping ("/getResponse")
+	public String getResponse () {
+		return "Hey gentelman take response!!! Heck!";
+	}
+		
 
 }
