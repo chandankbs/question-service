@@ -1,20 +1,22 @@
 package com.example.testapp.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.testapp.model.Questions;
+import com.example.testapp.service.QuestionService;
 
 @RestController
 public class AppController {
 	
-	@GetMapping ("/")
-	public List<String> getHello() {
-		List<String> list = new ArrayList<String>();
-		list.add("modi");
-		list.add("yogi ji");
-		
-		return list;
+	@Autowired
+	QuestionService questionService;
+	
+	@GetMapping ("/getQuestions")
+	public List <Questions> getQuestions() {
+		return questionService.getQuestions ();	
 	}
 }
