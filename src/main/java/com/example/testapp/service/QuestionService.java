@@ -18,5 +18,8 @@ public class QuestionService {
 		return questionRepository.findAll();
 	}
 
+	public Questions createOrUpdateQuestions(Questions questions) {
+		return questionRepository.save(questions);
+	}
 	
 }

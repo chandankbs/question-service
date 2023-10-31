@@ -7,6 +7,5 @@ import com.example.testapp.model.Questions;
 
 @Repository
 public interface QuestionRepository extends JpaRepository<Questions, Integer>{
-
 	
 }

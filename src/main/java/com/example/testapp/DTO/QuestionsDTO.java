@@ -1,57 +1,24 @@
-package com.example.testapp.model;
+package com.example.testapp.DTO;
 
-import java.io.Serializable;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
+public class QuestionsDTO {
 
-@Entity
-@Data
-public class Questions implements Serializable{
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue (strategy = GenerationType.SEQUENCE)
-	private Integer id;
-	
-	//@Column(name = "questionTitle")
+		
 	private String questionTitle;
 	
-	//@Column(name = "option1")
 	private String option1;
 	
-	//@Column(name = "option2")
 	private String option2;
 	
-	//@Column(name = "option3")
 	private String option3;
 	
-	//@Column(name = "option4")
 	private String option4;
 	
-	//@Column(name = "rightAnswer")
 	private String rightAnswer;
 	
-	//@Column(name = "difficultyLevel")
 	private String difficultyLevel;
 	
-	//@Column(name = "category")
 	private String category;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getQuestionTitle() {
 		return questionTitle;
@@ -119,10 +86,11 @@ public class Questions implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Questions [id=" + id + ", questionTitle=" + questionTitle + ", option1=" + option1 + ", option2="
-				+ option2 + ", option3=" + option3 + ", option4=" + option4 + ", rightAnswer=" + rightAnswer
+		return "QuestionsDTO [questionTitle=" + questionTitle + ", option1=" + option1 + ", option2=" + option2
+				+ ", option3=" + option3 + ", option4=" + option4 + ", rightAnswer=" + rightAnswer
 				+ ", difficultyLevel=" + difficultyLevel + ", category=" + category + "]";
 	}
+	
 	
 	
 }
