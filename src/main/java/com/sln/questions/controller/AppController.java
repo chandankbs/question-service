@@ -1,4 +1,4 @@
-package com.example.testapp.controller;
+package com.sln.questions.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.testapp.dto.QuestionsDTO;
-import com.example.testapp.entities.Questions;
-import com.example.testapp.service.QuestionService;
+import com.sln.questions.dto.QuestionsDto;
+import com.sln.questions.entities.Questions;
+import com.sln.questions.service.QuestionService;
 
 @RestController
 public class AppController {
@@ -27,17 +27,7 @@ public class AppController {
 	}
 	
 	@PostMapping ("/createOrUpdateQuestions")
-	public ResponseEntity<Questions>  createOrUpdateQuestions(@RequestBody QuestionsDTO questionsDto) {
-		Questions questions = new Questions();
-		questions.setCategory(questionsDto.getCategory());
-		questions.setDifficultyLevel(questionsDto.getDifficultyLevel());
-		questions.setOption1(questionsDto.getOption1());
-		questions.setOption2(questionsDto.getOption2());
-		questions.setOption3(questionsDto.getOption3());
-		questions.setOption4(questionsDto.getOption4());
-		questions.setQuestionTitle(questionsDto.getQuestionTitle());
-		questions.setRightAnswer(questionsDto.getRightAnswer());
-
+	public ResponseEntity<Questions>  createOrUpdateQuestions(@RequestBody Questions questions) {
 		return  new ResponseEntity<>(questionService.createOrUpdateQuestions(questions), HttpStatus.CREATED);
 	}
 }

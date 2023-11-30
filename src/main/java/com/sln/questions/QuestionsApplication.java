@@ -1,13 +1,13 @@
-package com.example.testapp;
+package com.sln.questions;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestappApplication {
+public class QuestionsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestappApplication.class, args);
+		SpringApplication.run(QuestionsApplication.class, args);
 	}
 
 }

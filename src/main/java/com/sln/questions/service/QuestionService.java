@@ -1,12 +1,12 @@
-package com.example.testapp.service;
+package com.sln.questions.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.testapp.entities.Questions;
-import com.example.testapp.repository.QuestionRepository;
+import com.sln.questions.entities.Questions;
+import com.sln.questions.repository.QuestionRepository;
 
 @Service
 public class QuestionService {
