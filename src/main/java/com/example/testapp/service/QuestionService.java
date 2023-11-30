@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.testapp.model.Questions;
-import com.example.testapp.service.repository.QuestionRepository;
+import com.example.testapp.entities.Questions;
+import com.example.testapp.repository.QuestionRepository;
 
 @Service
 public class QuestionService {
